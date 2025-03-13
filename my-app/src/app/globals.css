@@ -21,6 +21,12 @@
 .list-disc {
   @apply marker:text-[#D9D9D9] marker:text-2xl;
 }
+.roommate_li {
+  @apply grid grid-cols-2 gap-4;
+}
+.roommate_title {
+  @apply text-sm font-semibold;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

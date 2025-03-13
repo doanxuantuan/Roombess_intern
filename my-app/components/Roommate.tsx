@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import InfoRoommate from "./InfoRoommate";
-import info from "@assets/info";
+import info from "../src/assets/info";
+
 import { useRouter } from "next/navigation";
 const Roommate = () => {
   const router = useRouter();
@@ -10,9 +11,9 @@ const Roommate = () => {
   };
   return (
     <div className="ml-6 mr-6 mt-4 grid grid-cols-3">
-      {info.map((value, index) => {
+      {info.map((value) => {
         return (
-          <div className="mt-2" key={index}>
+          <div className="mt-2" key={value.id}>
             <InfoRoommate
               onClick={() => handleClick("/review")}
               avatar={value.avatar}

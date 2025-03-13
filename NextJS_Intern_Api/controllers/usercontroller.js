@@ -47,7 +47,7 @@ const users = [
   {
     id: 2,
     avatar: "/public/displaypic1.png",
-    name: "Veronica Gastambideádadasda",
+    name: "Veronica Gastambideaaaa",
     age: "24",
     address: "Aubry, TX",
     country: "UAE",

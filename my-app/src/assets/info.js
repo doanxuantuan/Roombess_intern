@@ -12,19 +12,19 @@ const info = [
     gender: malegender,
   },
   {
-    id: 1,
+    id: 2,
     avatar: roommate2,
     name: "jessica james",
     gender: malegender,
   },
   {
-    id: 1,
+    id: 3,
     avatar: roommate3,
     name: "Monica wellis",
     gender: malegender,
   },
   {
-    id: 1,
+    id: 4,
     avatar: roommate4,
     name: "Karan sharma",
     gender: malegender,

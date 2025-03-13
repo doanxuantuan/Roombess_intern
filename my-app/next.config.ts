@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    domains: ["lh3.googleusercontent.com"],
+
+    // domains: ["localhost"],
     remotePatterns: [
       {
         protocol: "http",
@@ -9,6 +12,16 @@ const nextConfig: NextConfig = {
         port: "5000",
       },
     ],
+  },
+
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/loginHome",
+        permanent: true,
+      },
+    ];
   },
 };
 

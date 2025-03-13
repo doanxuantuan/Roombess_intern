@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import image from "@assets/image";
+import image from "../src/assets/image";
 import { useRouter } from "next/navigation";
 const HeaderBack = () => {
   const router = useRouter();

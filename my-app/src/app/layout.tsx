@@ -6,6 +6,7 @@ import { UserProvider } from "@/context/userContext";
 import clsx from "clsx";
 
 import localFont from "next/font/local";
+import AuthProvider from "@components/SessionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,19 +33,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <UserProvider>
-      <html lang="en">
-        <body
-          className={clsx(
-            geistSans.variable,
-            unicorn.variable,
-            geistMono.variable,
-            "antialiased"
-          )}
-        >
-          {children}
-        </body>
-      </html>
-    </UserProvider>
+    <html lang="en">
+      <body
+        className={clsx(
+          geistSans.variable,
+          unicorn.variable,
+          geistMono.variable,
+          "antialiased"
+        )}
+      >
+        {" "}
+        <AuthProvider>
+          <UserProvider>{children} </UserProvider>
+        </AuthProvider>
+      </body>
+    </html>
   );
 }

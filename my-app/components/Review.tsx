@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import image from "@assets/image";
+import image from "../src/assets/image";
 import { Star } from "lucide-react";
 import { useRouter } from "next/navigation";
 

@@ -20,6 +20,7 @@ const Success = () => {
           src={image.success}
           alt="Success"
           className="w-[150px] h-[150px]"
+          unoptimized
         />
         <h1 className="mt-4 text-center font-bold text-xl leading-6">
           Your Review was submitted successfully!

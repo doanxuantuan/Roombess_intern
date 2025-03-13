@@ -13,7 +13,7 @@ const url = "http://localhost:5000";
 const InforUser = () => {
   // const [data, setData] = useState<User[]>([]);
   const { users } = useUser();
-
+  console.log(users);
   const swiperRef = useRef<SwiperRef | null>(null);
 
   const router = useRouter();
@@ -57,80 +57,103 @@ const InforUser = () => {
             return (
               <div key={item.id}>
                 <SwiperSlide>
-                  <Image
-                    onClick={() => {
-                      handleClick(item.id);
-                    }}
-                    width={350}
-                    height={350}
-                    src={url + item.avatar}
-                    alt=""
-                  />
+                  <div className="relative w-[350] h-[350]">
+                    <Image
+                      className="absolute"
+                      onClick={() => {
+                        handleClick(item.id);
+                      }}
+                      fill
+                      src={url + item.avatar}
+                      alt=""
+                    />
+                  </div>
+
                   <div className="ml-4 mb-10">
                     <div className="flex mt-2 gap-2 ">
                       <h1 className="font-unicorn">{item.name}</h1>
                       <h1>{item.age}</h1>
-                      <Image
-                        src="/verified.png"
-                        width={30}
-                        height={30}
-                        alt=""
-                      />
+                      <div className="w-[30] h-[30] relative">
+                        {" "}
+                        <Image src="/verified.png" fill alt="" />
+                      </div>
                     </div>
-                    <Image src="/star.png" alt="" width={100} height={100} />
+                    <div className="w-[100] h-[16] relative">
+                      {" "}
+                      <Image className="absolute" src="/star.png" alt="" fill />
+                    </div>
                     <div className="grid grid-cols-2 gap-4 mt-2">
                       <div className="info">
-                        <Image
-                          src="/vector.svg"
-                          alt=""
-                          width={14}
-                          height={16}
-                        />
+                        <div className="w-[14] h-[16] relative">
+                          {" "}
+                          <Image
+                            src="/vector.svg"
+                            alt=""
+                            fill
+                            className="absolute"
+                          />
+                        </div>
+
                         <h1 className="info_h1">{item.address}</h1>
                       </div>
                       <div className="info">
-                        <Image
-                          src="/vector2.svg"
-                          alt=""
-                          width={14}
-                          height={16}
-                        />{" "}
+                        <div className="w-[14] h-[16] relative">
+                          {" "}
+                          <Image
+                            src="/vector2.svg"
+                            alt=""
+                            fill
+                            className="absolute"
+                          />
+                        </div>
                         <div className="info_h1">{item.country}</div>
                       </div>
                       <div className="info">
-                        <Image
-                          src="/vector4.svg"
-                          alt=""
-                          width={14}
-                          height={16}
-                        />{" "}
+                        <div className="w-[14] h-[16] relative">
+                          {" "}
+                          <Image
+                            src="/vector3.svg"
+                            alt=""
+                            fill
+                            className="absolute"
+                          />
+                        </div>
                         <div className="info_h1">{item.price}</div>
                       </div>
                       <div className="info">
-                        <Image
-                          src="/vector4.svg"
-                          alt=""
-                          width={14}
-                          height={16}
-                        />{" "}
+                        <div className="w-[14] h-[16] relative">
+                          {" "}
+                          <Image
+                            src="/vector4.svg"
+                            alt=""
+                            fill
+                            className="absolute"
+                          />
+                        </div>
                         <div className="info_h1">{item.language}</div>
                       </div>
                       <div className="info">
-                        <Image
-                          src="/vector5.svg"
-                          alt=""
-                          width={14}
-                          height={16}
-                        />{" "}
+                        <div className="w-[14] h-[16] relative">
+                          {" "}
+                          <Image
+                            src="/vector5.svg"
+                            alt=""
+                            fill
+                            className="absolute"
+                          />
+                        </div>
                         <div className="info_h1">{item.model}</div>
                       </div>
                       <div className="info">
-                        <Image
-                          src="/vector6.svg"
-                          alt=""
-                          width={14}
-                          height={16}
-                        />{" "}
+                        <div className="w-[14] h-[16] relative">
+                          {" "}
+                          <Image
+                            src="/vector6.svg"
+                            alt=""
+                            fill
+                            className="absolute"
+                          />
+                        </div>
                         <div className="info_h1">{item.character}</div>
                       </div>
                     </div>
